@@ -1,0 +1,126 @@
+Classes
+-------
+
+board.py
+--------------
+
+
+Class: FEN
+---------------------
+description
+	A class that provides various refrence FENs 
+	for testing.
+
+variables
+----------------------------
+START_POS
+	dtype: str
+	FEN for starting position
+
+**DEBUG FENS**
+POS_2
+	dtype: str
+	description:
+		https://www.chessprogramming.org/Perft_Results
+POS_3 
+	dtype: str
+	description:
+		https://www.chessprogramming.org/Perft_Results
+POS_4 
+	dtype: str
+	description:
+		https://www.chessprogramming.org/Perft_Results
+POS_5
+	dtype: str
+	description:
+		https://www.chessprogramming.org/Perft_Results
+POS_6
+	dtype: str
+	description:
+		https://www.chessprogramming.org/Perft_Results
+----------------------------
+---------------------
+
+
+Class: PieceType
+---------------------
+description - A "struct" class providing representations for pieces
+
+
+variables
+----------------------------
+PAWN
+	dtype: int
+	description: 
+		Integer representation of pawn
+KNIGHT
+	dtype: int
+	description: 
+		Integer representation of knight
+BISHOP
+	dtype: int
+	description: 
+		Integer representation of bishop
+ROOK
+	dtype: int
+	description: 
+		Integer representation of rook
+QUEEN
+	dtype: int
+	description: 
+		Integer representation of queen
+KING
+	dtype: int
+	description: 
+		Integer representation of king
+
+SLIDING_PIECES
+	dtype: list[int]
+	description: 
+		List of sliding pieces (bishop,queen,rook)
+
+STRING_ABREVIATIONS
+	dtype: dict[str,int]
+	description:
+		Look up converting from piece string representations of pieces to integer representations of pieces
+	
+NUMBER_ABREVIATIONS
+	dtype: dict[int,str]
+	description:
+		Look up converting from piece integer representations of pieces to string representations of pieces
+----------------------------
+---------------------
+
+
+Class: BitTwiddle
+---------------------
+description - A class that provides utilities for twiddling with bits
+
+variables
+----------------------------
+zero
+	dtype: int
+	description:
+		c_int64(0).value
+one
+	dtype: int
+	description:
+		c_int64(1).value
+
+methods and functions
+----------------------------
+bitscan_forward
+	description:
+		Provides a bitscan forward algorithm
+		------------------------------------
+		Algorithm used
+        	https://www.chessprogramming.org/BitScan
+       	 bitScanForward
+        	@author Martin Läuter (1997)
+        	Charles E. Leiserson
+        	Harald Prokop
+        	Keith H. Randall
+		------------------------------------
+----------------------------
+---------------------
+	
